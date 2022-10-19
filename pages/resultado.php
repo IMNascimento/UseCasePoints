@@ -11,9 +11,9 @@
 </head>
 <body>
     <header class="hrd">
-        <div class="container"> 
+        <div class="container">
             <div class="row align-items-center">
-                
+
                 <div class="col-6">
                     <a href="calculos.html" class="butn "><img src="../src/imagem/icones/seta-direita.png" alt="voltar"></a>
                 </div>
@@ -21,7 +21,7 @@
                     <h2 class="title-hrd float-end">Resultado</h2>
                 </div>
             </div>
-        </div>   
+        </div>
     </header>
     <main>
         <div class="php-result text-center">
@@ -31,32 +31,44 @@
 @include('functions.php');
 @include('functionsucp.php');
 
-
-$camp= array("simpleTap","mediumTap","advancedTap","simpleTucp","mediumTucp","complexTucp","t1","t2","t3","t4","t5","t6","t7","t8","t9","t10","t11","t12","t13","f1","f2","f3","f4","f5","f6","f7","f8");
-$type= array('float','float','float','float','float','float','float','float','float','float','float','float','float','float','float','float','float','float','float','float','float','float','float','float','float','float','float');
+// refatoração dos nomes dos campos e tipo e da função
+$camp= array("simpleTap","mediumTap","advancedTap","simpleTucp","mediumTucp",
+"complexTucp","t1","t2","t3","t4","t5","t6","t7","t8","t9","t10","t11","t12",
+"t13","f1","f2","f3","f4","f5","f6","f7","f8");
+$type= array('float','float','float','float','float','float','float','float',
+'float','float','float','float','float','float','float','float','float','float',
+'float','float','float','float','float','float','float','float','float');
 $d= check($_POST,$camp,$type);
 
 
 
+// retirar essa linha para otimizar memoria
+//$uucp=uucp(calculateTap($d['simpleTap'],$d['mediumTap'],$d['advancedTap']),casePoints($d['simpleTucp'],$d['mediumTucp'],$d['complexTucp']));
 
-$uucp=uucp(calculateTap($d['simpleTap'],$d['mediumTap'],$d['advancedTap']),casePoints($d['simpleTucp'],$d['mediumTucp'],$d['complexTucp']));
+// estava infringindo a psr 1 sobre o limite de 120 caracteres tendo que quebrar linha
+$technicalFactor=array($d['t1'],$d['t2'],$d['t3'],$d['t4'],$d['t5'],$d['t6'],
+$d['t7'],$d['t8'],$d['t9'],$d['t10'],$d['t11'],$d['t12'],$d['t13']);
+$environmentalFactor=array($d['f1'],$d['f2'],$d['f3'],$d['f4'],$d['f5'],
+$d['f6'],$d['f7'],$d['f8']);
 
+// nome da variavei tem que ser refatorada
+/* essa função de vocês foi passada direto
+$deucerto=ucp(uucp(calculateTap($d['simpleTap'],$d['mediumTap'],
+$d['advancedTap']),casePoints($d['simpleTucp'],$d['mediumTucp'],
+$d['complexTucp'])),technicalFactor($technicalFactor),
+environmentalFactor($environmentalFactor));*/
 
-$technicalFactor=array($d['t1'],$d['t2'],$d['t3'],$d['t4'],$d['t5'],$d['t6'],$d['t7'],$d['t8'],$d['t9'],$d['t10'],$d['t11'],$d['t12'],$d['t13']);
+// não precisa dessa dupla concatenação para strin
+//echo "<p>" . "Resultado " . eh($deucerto) . " horas" . "<p>";
 
-
-$environmentalFactor=array($d['f1'],$d['f2'],$d['f3'],$d['f4'],$d['f5'],$d['f6'],$d['f7'],$d['f8']);
-
-$deucerto=ucp($uucp,technicalFactor($technicalFactor),environmentalFactor($environmentalFactor));
-
-
-echo "<p>" . "Resultado " . eh($deucerto) . " horas" . "<p>";
-
-
+echo "<p>Resultado " . eh(ucp(uucp(calculateTap($d['simpleTap'],$d['mediumTap'],
+$d['advancedTap']),casePoints($d['simpleTucp'],$d['mediumTucp'],
+$d['complexTucp'])),technicalFactor($technicalFactor),
+environmentalFactor($environmentalFactor))) . "Horas gastas<p>";
 
 ?>
         </div>
-        
+
     </main>
     <footer class="fto">
         <p class="copyright-text text-center">Copyright &copy; 2022 All Rights Tec. Desenvolvimento Sistema</p>
