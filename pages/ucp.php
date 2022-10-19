@@ -25,6 +25,6 @@ $deucerto=ucp($uucp,technicalFactor($technicalFactor),environmentalFactor($envir
 
 echo eh($deucerto);
 
-
+// função desnecessaria
 
 ?>
