@@ -11,9 +11,9 @@
 </head>
 <body>
     <header class="hrd">
-        <div class="container"> 
+        <div class="container">
             <div class="row align-items-center">
-                
+
                 <div class="col-6">
                     <a href="calculos.html" class="butn "><img src="../src/imagem/icones/seta-direita.png" alt="voltar"></a>
                 </div>
@@ -21,7 +21,7 @@
                     <h2 class="title-hrd float-end">Resultado</h2>
                 </div>
             </div>
-        </div>   
+        </div>
     </header>
     <main>
         <div class="php-result text-center">
@@ -51,12 +51,18 @@ $deucerto=ucp($uucp,technicalFactor($technicalFactor),environmentalFactor($envir
 
 
 echo "<p>" . "Resultado " . eh($deucerto) . " horas" . "<p>";
-
-
+//unset($camp);
+//unset($type);
+//unset($d);
+//unset($uucp);
+//unset($technicalFactor);
+//unset($environmentalFactor);
+//unset($deucerto);
+//echo memory_get_usage();
 
 ?>
         </div>
-        
+
     </main>
     <footer class="fto">
         <p class="copyright-text text-center">Copyright &copy; 2022 All Rights Tec. Desenvolvimento Sistema</p>
