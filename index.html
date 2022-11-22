@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gustav Karner realizando cálculos automático</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class=" hrd">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <h2 class="title-hrd mb-lg-0 mb-md-2">Use case Points</h2>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="src/imagem/icones/cardapio-tres.png" alt="cardapio-tres" />
+                </button>
+                <div class="collapse navbar-collapse justify-content-end align-items-center"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav me-5 align-items-center">
+                        <li class="dropdown-item mb-3 me-2">
+                            <a href="pages/calculos.html" class="butn">Calculo</a>
+                        </li>
+                        <li class="dropdown-item  mb-3 me-2">
+                            <a href="pages/sobre-nos.html" class="butn">Sobre nós</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="src/imagem/gustav-karner.jpg " class="d-block img-fluid" alt="Bootstrap Themes" width="700" height="700" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h2 id="text0" class="display-5 fw-bold lh-1 mb-3">História</h2>
+                    <p class="lead">
+                        O método de Pontos de Caso de Uso surge, porque havia a falsa noção de que a Análise de Pontos
+                        de Função(APF)
+                        não era adequada para medir sistemas orientados a objetos no início da década de 1990.
+                        A aplicabilidade da APF, até então, era testada e madura com outras metodologias. No entanto,
+                        aqueles que compartilhavam desta noção desconheciam a APF em termos práticos. Isso, porque a APF
+                        mede software em
+                        termos de sua intercessão com os fluxos operacionais do negócio ao quantificar a funcionalidade
+                        transferida das
+                        tarefas e serviços do usuário. Consequentemente, a medição independente não só de tecnologia,
+                        mas também da abordagem
+                        de desenvolvimento utilizada.Primeiramente, houve a disseminação da construção e projeto de
+                        sistemas orientados a objetos,
+                        houve também uma mudança na forma de se especificar e modelar os sistemas. Em seguida, a UML e
+                        os casos de uso rapidamente
+                        tornaram-se padrão na indústria de software. Por fim, esse fenômeno se repete 20 anos depois com
+                        as Histórias do Usuário.
+                    </p>
+                </div>
+            </div>
+            <div class="p-3 pt-5 border-top">
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <article>
+                        <div class="border-bottom mb-lg-5">
+                            <h2 id="text1">O que é Análise de Pontos de Função, objetivos e referências</h2>
+                            <p>
+                                Análise de Pontos de Função (APF) é uma técnica de medição das funcionalidades fornecidas pelo
+                                software do ponto de vista de seus usuários.
+                            </p>
+                            <p><b>Os objetivos da análise de pontos de função são medir:</b></p>
+                            <ul>
+                                <li> A funcionalidade implementada no software, que o usuário solicita e recebe; </li>
+                                <li>A funcionalidade impactada pelo desenvolvimento, melhoria e manutenção de software, independentemente da tecnologia utilizada na implementação.</li>
+                            </ul>
+                        </div>
+                        <div class="border-bottom mb-lg-5">
+                            <h2 id="text2">O que é Ponto de Função</h2>
+                            <p>
+                                É uma unidade de medida de software reconhecida pela ISO/IEC 20926 para estimar o tamanho de um sistema de
+                                informação baseando-se na funcionalidade percebida pelo usuário do sistema, independentemente da tecnologia
+                                usada para implementá-lo
+                            </p>
+                        </div>
+                        <div class="border-bottom mb-lg-5">
+                            <h2 id="text3">O que a Análise de Pontos de Função mede</h2>
+                            <p>
+                                A APF mede o que o software faz, independentemente de como ele foi construído. Portanto,
+                                o processo de medição ou de contagem de pontos de função é baseado na avaliação dos requisitos
+                                funcionais do usuário, como descrito nos artefatos do desenvolvimento. O procedimento de medição
+                                está descrito pelo IFPUG em seu Manual de Práticas de Contagem (Counting Practices Manual).
+                            </p>
+                            <p><b>Sob esse contexto, APF mede:</b></p>
+                            <ul>
+                                <li>Projetos de desenvolvimento e manutenção de software, independentemente da tecnologia utilizada na implementação, de forma a acompanhar sua evolução;</li>
+                                <li>A funcionalidade recebida pelo usuário, após o projeto de software, de forma a verificar seu tamanho e custo, comparando-os com o que foi originalmente estimado;</li>
+                                <li>A funcionalidade solicitada pelo usuário, antes do projeto de software, de forma a estimar seu tamanho e seu custo;</li>
+                            </ul>
+                        </div>
+                        <div class="mb-lg-5">
+                            <h2 id="text4">O que a Análise de Pontos de Função não mede diretamente</h2>
+                            <p>
+                                É importante destacar que pontos de função não medem diretamente esforço, produtividade
+                                ou custo, porque ela produz uma medida de tamanho funcional do software. Porém, à partir
+                                do tamanho funcional correlacionando com outras variáveis, torna-se possível identificar
+                                produtividade, estimar esforço e/ou custo de projetos de software.
+                            </p>
+                        </div>
+
+                    </article>
+                </div>
+                <div class="col-md-3">
+                    <div class="position-sticky">
+                        <div class="p-4">
+                            <h4 class="fst-italic">Navegação</h4>
+                            <ol class="list-unstyled mb-0">
+                                <li><a href="#text0">História</a></li>
+                                <li><a href="#text1">Análise de Pontos de Função</a></li>
+                                <li><a href="#text2">Ponto de Função</a></li>
+                                <li><a href="#text3">Medição</a></li>
+                                <li><a href="#text4">Medição Indireta</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="fto">
+        <p class="copyright-text text-center">Copyright &copy; 2022 All Rights Tec. Desenvolvimento Sistema</p>
+    </footer>
+</body>
+
+</html>
